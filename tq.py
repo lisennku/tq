@@ -52,7 +52,10 @@ def get_weather(content):
 def main():
     city = raw_input("city input: ")
     con = get_response(city)
-    get_weather(con)
+    if not con:
+        return 
+    else:
+        get_weather(con)
 
 if __name__ == '__main__':
     main()
